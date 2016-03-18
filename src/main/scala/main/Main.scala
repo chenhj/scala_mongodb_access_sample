@@ -18,7 +18,7 @@ object Main {
 
     // タイトルで検索
     val title = "タイトル2"
-    Post.find.foreach(println)
+    Post.findByTitle(title).foreach(println)
 
   }
 
