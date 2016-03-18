@@ -3,9 +3,6 @@ package main
 import models.Post
 import org.bson.types.ObjectId
 
-/**
-  * Created by R1 on 2016/01/28.
-  */
 object Main {
 
   def main(args: Array[String]) {
