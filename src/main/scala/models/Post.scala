@@ -10,7 +10,7 @@ object Post extends MongoDBModel[Post] {
   override implicit val collectionName: String = "posts"
 
   def findByTitle(title: String): Seq[Post] = {
-    collection.find("title" $regex s".*${title}.*").map { post => modelExtract(post) }.toSeq
+    collection.find("title" $regex s".*${title}.*").map(extract).toSeq
   }
 
 }

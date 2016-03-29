@@ -16,6 +16,8 @@ abstract class MongoDBModel[T](implicit m: Manifest[T]) {
 
   def modelExtract(t: Any) = serialize(t).camelizeKeys.extract[T]
 
+  def extract: Any => T = (t: Any) => modelExtract(t)
+
   /**
     * 全件取得
     *
